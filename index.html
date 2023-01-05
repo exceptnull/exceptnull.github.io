@@ -19,15 +19,10 @@
     <title>Aditya Sharma</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script>
-        function CopyToClipboard(id)
-        {
-          var r = document.createRange();
-          r.selectNode(document.getElementById(id));
-          window.getSelection().removeAllRanges();
-          window.getSelection().addRange(r);
-          document.execCommand('copy');
-          window.getSelection().removeAllRanges();
-        }
+        function copyText() {
+            /* Copy pubkey into clipboard */
+            navigator.clipboard.writeText("220def02c8bbb9f82b48e943b2d8a683b88b354771df9cf0daf2ee5d806fe856");
+        }
     </script>
   </head>
   
@@ -45,8 +40,7 @@
             <li><a href="https://www.linkedin.com/in/exceptnull/" target="_blank">LinkedIn</a></li>
             <li><a href="https://github.com/exceptnull" target="_blank">GitHub</a></li>
             <li><a href="https://twitter.com/exceptnull" target="_blank">Twitter</a></li>
-            <span hidden id="sample">220def02c8bbb9f82b48e943b2d8a683b88b354771df9cf0daf2ee5d806fe856</span>
-            <li><a href="#" onclick="CopyToClipboard('sample');return false;">Nostr</a></li>
+            <li><a href="#" onclick="copyText()">Nostr</a></li>
         </ul>
     </div>
   </body>
