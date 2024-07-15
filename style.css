@@ -19,6 +19,10 @@
     line-height: 1.5;
   }
   
+  .devanagari {
+    font-family: 'Yatra One', cursive;
+  }
+
   .container {
     max-width: 1080px;
     margin: 0 auto;
@@ -38,12 +42,11 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    flex-wrap: wrap;
   }
   
   .logo {
     color: var(--primary-color);
-    font-family: 'Yatra One';
+    font-family: 'Yatra One', cursive;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
@@ -52,9 +55,6 @@
   nav ul {
     display: flex;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
   }
   
   nav ul li {
@@ -77,26 +77,26 @@
   }
   
   h1 {
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 800;
     margin-bottom: 16px;
   }
   
   h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     margin-top: 48px;
     margin-bottom: 24px;
   }
   
   p {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 24px;
   }
   
   .hero {
     background-color: var(--gray-light);
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
   }
   
@@ -109,7 +109,8 @@
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.2s;
-    margin: 8px;
+    text-align: center;
+    min-width: 120px; /* Ensures a minimum width for the buttons */
   }
   
   .btn:hover {
@@ -117,7 +118,7 @@
   }
   
   .section {
-    margin-bottom: 48px;
+    margin-bottom: 64px;
   }
   
   .grid {
@@ -164,58 +165,32 @@
     margin-bottom: 8px;
   }
   
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: left;
+  }
+
+  .contact-links .btn {
+    margin: 0;
+  }
+
+  @media (max-width: 480px) {
+    .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-links .btn {
+        text-align: center;
+    }
+  }
+  
   footer {
     background-color: var(--gray-light);
     padding: 48px 0;
     text-align: center;
     font-size: 14px;
     color: var(--text-color);
-  }
-  
-  /* Mobile-friendly adjustments */
-  @media (max-width: 768px) {
-    nav {
-      height: auto;
-      padding: 16px 0;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    nav ul {
-      margin-top: 16px;
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    nav ul li {
-      margin-left: 0;
-      margin-bottom: 8px;
-    }
-  
-    main {
-      padding-top: 120px;
-    }
-  
-    h1 {
-      font-size: 28px;
-    }
-  
-    h2 {
-      font-size: 24px;
-    }
-  
-    .hero {
-      padding: 40px 0;
-    }
-  
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .btn {
-      display: block;
-      width: 100%;
-      text-align: center;
-      margin: 8px 0;
-    }
   }
