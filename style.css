@@ -44,6 +44,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 10;
+  top: 0;
 }
 
 nav {
@@ -51,6 +52,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  padding: 0 24px;
 }
 
 .logo {
@@ -199,35 +201,53 @@ footer {
   opacity: 0.8;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   nav {
-      flex-direction: column;
-      height: auto;
-      padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
   }
 
   nav ul {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    display: none; /* Hide by default */
+  }
+
+  nav ul.show {
+    display: flex; /* Show when the menu is toggled */
   }
 
   nav ul li {
-      margin: 10px 0;
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: var(--button-text);
+    font-size: 24px;
+  }
+
+  .menu-toggle:hover {
+    opacity: 0.8;
   }
 
   main {
-      padding-top: 120px;
+    padding-top: 120px;
   }
 
   .grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .btn {
-      display: block;
-      width: 100%;
-      text-align: center;
-      margin: 8px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 8px 0;
   }
 }
